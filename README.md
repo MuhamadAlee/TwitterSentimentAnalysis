@@ -3,11 +3,10 @@
  
  We have used Twitter Sentiment for Personality Detection of five personalities eg. Barack Obama,Hillary Clinton, Jeremy Corbyn, Boris Johnson and Bill Gates.
  
-  Step 1 : We have Scrapped the tweets of these Personalities 2000 each using the official API of Twitter called Tweepy.
+   Step 1 : We have Scrapped the tweets of these Personalities 2000 each using the official API of Twitter called Tweepy.
  
- 
-  Step 2 : Then we have cleaned these Tweets as removing Stopwords, retweets, hashTags urls and emojis for specific text classification.
- 
+   Step 2 : Then we have cleaned these Tweets as removing Stopwords, retweets, hashTags urls and emojis for specific text classification.
+   
   Step 3 : Afterwards we have detected the the emotions for each of the tweet using NRC Emotion Lexicon which having 10 classes for emotion Charcteristics and append it to each of            tweet in the dataframe. 
  
   Step 4 : Then we have simply added the writer of each of the tweets in front of each of the tweet eg. Barack Obama. This will be our Dependent Feature.
