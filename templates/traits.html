@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>Personality Traits</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+.navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:2;
+}
+
+
+
+.navbar a:hover {
+  background: DodgerBlue;
+  color:#ffffff;
+}
+body  {
+  background-image: url("static/img/bg.jpg");
+  background-color: #cccccc;
+  color:#ffffff;
+}
+
+.navbar a{
+
+  border: 0px solid DodgerBlue;
+  border-radius: 25px;
+  margin:3px;
+}
+
+#logo{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+background-color:DodgerBlue;
+padding:3px;
+
+}
+#logo:hover{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container-fluid">
+    <div id="logo">
+
+
+
+      <img src="static/img/image.png" alt="logo" style="width:40px;">
+
+        <b>Twitter Sentiments Analysis</b>
+        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('index') }}"><h6>Home</h6></a>
+    </li>
+         <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('confusion') }}"><h6>Matrix</h6></a>
+    </li>
+
+
+
+
+<h6>
+         <li class="nav-item dropdown active my">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Models
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ url_for('recalling') }}" >Recall</a>
+         <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('precisioning') }}">Precision</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('models') }}">Accuracy</a>
+        </div>
+      </li>
+
+</h6>
+
+
+
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('traits') }}"><h6>PersonalityTraits</h6></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('predict') }}"><h6>PredictInput</h6></a>
+    </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="mt-5"></div>
+<div class="container pt-3">
+
+      <!-- Page Heading -->
+      <h1 class="my-4 text-center mb-5">Personality Traits across different Emotions
+      </h1>
+
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" height="600" width="600"  src="static/img/borisTraits.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Boris Johnson</h3>
+          <p>These Traits have been classified using NRF Emotion Lexicon applied on the most 2000 recent tweets of Boris Johnson</p>
+            <img src="static/img/boris.jpg" height="300" width="300">
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Two -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" height="600" width="600" src="static/img/barackTraits.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Barack Obama</h3>
+
+
+          <p>These Traits have been classified using NRF Emotion Lexicon applied on the most 2000 recent tweets of Barack Obama</p>
+        <img src="static/img/barack.jpg"  height="300" width="300">
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" height="600" width="600" src="static/img/billTraits.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Bill Gates</h3>
+
+          <p>These Traits have been classified using NRF Emotion Lexicon applied on the most 2000 recent tweets of Bill Gates</p>
+        <img src="static/img/gates.jpg" height="300" width="300">
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Four -->
+      <div class="row">
+
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" height="600" width="600" src="static/img/hillaryTraits.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Hillary Clinton</h3>
+
+          <p>These Traits have been classified using NRF Emotion Lexicon applied on the most 2000 recent tweets of Hillary Clinton</p>
+        <img src="static/img/hillary.jpg" height="300" width="300">
+        </div>
+      </div>
+
+
+      <!-- /.row -->
+
+      <hr>
+
+      <div class="row">
+
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" height="600" width="600" src="static/img/CorbynTraits.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Jeremy Corbyn</h3>
+
+          <p>These Traits have been classified using NRF Emotion Lexicon applied on the most 2000 recent tweets of JeremyCorbyn</p>
+        <img src="static/img/corbyn.jpg" height="300" width="300">
+        </div>
+      </div>
+
+
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Pagination -->
+
+    </div>
+    <!-- /.container -->
+
+
+
+</body>
+</html>

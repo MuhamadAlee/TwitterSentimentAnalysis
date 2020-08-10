@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>Home</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+.navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:2;
+}
+
+
+
+.navbar a:hover {
+  background: DodgerBlue;
+  color:#ffffff;
+}
+body  {
+  background-image: url("static/img/bg.jpg");
+  background-color: #cccccc;
+  color:#ffffff;
+}
+
+.navbar a{
+
+  border: 0px solid DodgerBlue;
+  border-radius: 25px;
+  margin:3px;
+}
+
+#logo{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+background-color:DodgerBlue;
+padding:3px;
+
+}
+#logo:hover{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+}
+.my{
+    overflow: visible!important;
+}
+</style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container-fluid">
+    <div id="logo">
+
+
+
+      <img src="static/img/image.png" alt="logo" style="width:40px;">
+
+        <b>Twitter Sentiments Analysis</b>
+        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('index') }}"><h6>Home</h6></a>
+    </li>
+         <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('confusion') }}"><h6>Matrix</h6></a>
+    </li>
+
+
+
+
+<h6>
+         <li class="nav-item dropdown active my">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Models
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ url_for('recalling') }}" >Recall</a>
+         <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('precisioning') }}">Precision</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('models') }}">Accuracy</a>
+        </div>
+      </li>
+
+</h6>
+
+
+
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('traits') }}"><h6>PersonalityTraits</h6></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('predict') }}"><h6>PredictInput</h6></a>
+    </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="mt-5"></div>
+<div class="container pt-5">
+  <div class="row">
+
+    <div class=" col-md-12">
+
+      <h2 class="text-center pt-3 pl-3 pr-3">Twitter Sentiment Analysis for Tweets Prediction
+      </h2>
+    <h6 class="text-center pb-3">Tweets from following personalities have been classified through our model. </h6>
+    </div>
+
+    <!-- Team Member 1 -->
+    <div class=" col-md-6 mb-4">
+      <div class="card border-0 shadow card text-white bg-secondary">
+        <img src="static/img/boris.jpg" class="card-img-top" height="500" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Boris Johnson</h5>
+          <div class="card-text text-white-50 ">United Kingdom</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class=" col-md-6 mb-4">
+      <div class="card border-0 shadow card text-white bg-secondary">
+        <img src="static/img/barack.jpg" height="500" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Barack Obama</h5>
+          <div class="card-text text-white-50">America</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class=" col-md-6 mb-4">
+      <div class="card border-0 shadow card text-white bg-secondary">
+        <img src="static/img/gates.jpg" class="card-img-top" height="500" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Bill Gates</h5>
+          <div class="card-text text-white-50">America</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class=" col-md-6 mb-4">
+      <div class="card border-0 shadow card text-white bg-secondary">
+        <img src="static/img/hillary.jpg" class="card-img-top" height="500" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Hillary Clinton</h5>
+          <div class="card-text text-white-50">America</div>
+        </div>
+      </div>
+    </div>
+
+<div class=" col-md-6 mb-4">
+      <div class="card border-0 shadow card text-white bg-secondary">
+        <img src="static/img/corbyn.jpg" height="500" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Jeremy Corbyn</h5>
+          <div class="card-text text-white-50">Uniter Kingdom</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+
+</body>
+</html>

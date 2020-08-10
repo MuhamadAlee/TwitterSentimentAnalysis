@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Prediction Input</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+
+.navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:2;
+}
+
+.navbar a{
+
+  border: 0px solid DodgerBlue;
+  border-radius: 25px;
+  margin:3px;
+}
+
+.navbar a:hover {
+  background: DodgerBlue;
+  color:#ffffff;
+}
+
+
+
+
+body  {
+  background-image: url("static/img/bg.jpg");
+  background-color: #cccccc;
+  color:#ffffff;
+}
+
+#btn:hover{
+  background: DodgerBlue;
+  border:1px solid DodgerBlue;
+
+}
+
+#logo{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+background-color:DodgerBlue;
+padding:3px;
+
+}
+#logo:hover{
+  border: 0.5px solid DodgerBlue;
+  border-radius: 25px;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container-fluid">
+    <div id="logo">
+
+
+
+      <img src="static/img/image.png" alt="logo" style="width:40px;">
+
+        <b>Twitter Sentiments Analysis</b>
+        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('index') }}"><h6>Home</h6></a>
+    </li>
+         <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('confusion') }}"><h6>Matrix</h6></a>
+    </li>
+
+
+
+
+<h6>
+         <li class="nav-item dropdown active my">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Models
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ url_for('recalling') }}" >Recall</a>
+         <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('precisioning') }}">Precision</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ url_for('models') }}">Accuracy</a>
+        </div>
+      </li>
+
+</h6>
+
+
+
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('traits') }}"><h6>PersonalityTraits</h6></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ url_for('predict') }}"><h6>PredictInput</h6></a>
+    </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="mt-5"></div>
+<div class="container pt-3">
+
+      <!-- Page Heading -->
+      <h1 class="my-4 text-center mb-5">Classify Tweets using Input
+      </h1>
+
+
+
+
+
+<div class="row pt-5">
+   <div class=" col-md-2"></div>
+
+  <div class="col-md-8">
+      <form class="form-inline" method="POST"  action="classify">
+
+        <input type="text" class="form-control col-md-9" name="text" required  placeholder="Place your tweet here!">
+
+        <input type="submit" id="btn" class="btn btn-secondary col-md-3" value="Classify">
+      </form>
+    </div>
+
+   <div class=" col-md-2"></div>
+
+
+    </div>
+
+
+
+
+
+
+      <!-- Project One -->
+  {% block content %}
+
+  {% if image!=null %}
+
+      <div class="row pt-3 ">
+
+
+   <div class=" col-md-2"></div>
+
+        <div class="col-md-3">
+
+          <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0 img-thumbnails" style="height: 400px; width: 400px;"  src="{{ image }}" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+   <img class="img-fluid rounded mb-3 mb-md-0 img-thumbnails " style="height: 245px; width: 445px;"  src="{{ trait }}" alt="">
+
+        <h3 class="mt-3">{{ name }}</h3>
+          <p>{{ tweet }}</p>
+
+
+          </div>
+
+   <div class=" col-md-2"></div>
+
+            {% endif %}
+      </div>
+        {% endblock content %}
+
+      <!-- /.row -->
+
+      <hr>
+
+
+      <!-- Pagination -->
+
+    </div>
+    <!-- /.container -->
+
+
+
+</body>
+</html>
