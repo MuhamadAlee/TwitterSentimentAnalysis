@@ -13,13 +13,13 @@ We have used Twitter Sentiment for Personality Detection of five personalities e
  
   Step 5 : Then we have Applied five Machine Learning and one Deep Learning Models on the Same dataset which are.
           
-          ==> Decision tree
-          ==> Random forest
-          ==> Naive Bayes
-          ==> Logistic Regression
-          ==> Support Vector Machine
+      ==> Decision tree
+      ==> Random forest
+      ==> Naive Bayes
+      ==> Logistic Regression
+      ==> Support Vector Machine
          
-         ==> Recurrent Neural Network (Long Short Term Memory Units)
+      ==> Recurrent Neural Network (Long Short Term Memory Units)
          
   Step 5 : We have got reasonable accuracies for all of these models having best of the accuracy for RNN about 90%.
  
@@ -31,10 +31,10 @@ We have used Twitter Sentiment for Personality Detection of five personalities e
  
  Note : The dominent libraries of Python that we have used are 
  
-     ==> Tweepy
-     ==> Pandas
-     ==> Sickit Learn
-     ==> Matplotlib
-     ==> Keras
-     ==> Tensorflow
-     ==> Numpy
+      ==> Tweepy
+      ==> Pandas
+      ==> Sickit Learn
+      ==> Matplotlib
+      ==> Keras
+      ==> Tensorflow
+      ==> Numpy
