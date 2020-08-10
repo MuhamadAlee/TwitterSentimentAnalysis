@@ -32,6 +32,7 @@ We have used Twitter Sentiment for Personality Detection of five personalities e
  Note : The dominent libraries of Python that we have used are 
  
       ==> Tweepy
+          ![Screenshot](https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1720%2F1*hf0H7Ygg_Tcmvvq_q8QMXg.png&imgrefurl=https%3A%2F%2Fmedium.com%2F%40marekkcichy%2Fhow-to-set-up-an-obscenely-easy-tweetbot-in-python-7837d776e706&tbnid=_oWlAm80Ultn6M&vet=12ahUKEwjlvqXkk5DrAhUQ_RoKHT8QAUgQMygGegUIARClAQ..i&docid=HITwVuIgXPBTAM&w=860&h=245&q=tweepy&ved=2ahUKEwjlvqXkk5DrAhUQ_RoKHT8QAUgQMygGegUIARClAQ)
       ==> Pandas
       ==> Sickit Learn
       ==> Matplotlib
