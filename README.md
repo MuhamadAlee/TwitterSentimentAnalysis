@@ -29,4 +29,12 @@ We have used Twitter Sentiment for Personality Detection of five personalities e
  
   Step 8 : At last we have made a web applictaion using Python framework Flask for interaction for the user.
  
+ Note : The dominent libraries of Python that we have used are 
  
+     ==> Tweepy
+     ==> Pandas
+     ==> Sickit Learn
+     ==> Matplotlib
+     ==> Keras
+     ==> Tensorflow
+     ==> Numpy
